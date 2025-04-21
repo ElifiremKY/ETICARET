@@ -1,44 +1,36 @@
-package dao;
-
+import dao.ProductDAO;
 import model.Product;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import java.util.List; // Bu satırı ekleyin
+import org.junit.jupiter.api.*;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductDAOTest {
 
-    private ProductDAO productDAO;
+    ProductDAO dao;
 
     @BeforeEach
-    public void setUp() {
-        productDAO = new ProductDAO();
+    void setUp() {
+        dao = new ProductDAO(); // Burada veritabanı bağlantısı yapılır
     }
 
     @Test
-    public void testListProducts() {
-        List<Product> productList = productDAO.getAllProducts();
-        assertNotNull(productList, "Ürün listesi null olmamalı");
-        assertTrue(productList.size() > 0, "En az bir ürün olmalı");
+    void testUrunListeleme() {
+        List<Product> urunler = dao.getAllProducts();
+        assertNotNull(urunler);
+        assertTrue(urunler.size() > 0); // En az bir ürün varsa başarılı
     }
 
     @Test
-    public void testGetProductDetails() {
-        Product product = productDAO.getProductById(1); // örnek ürün ID
-        assertNotNull(product, "Ürün bulunmalı");
-        assertEquals(1, product.getId(), "Ürün ID eşleşmeli");
+    void testUrunDetaylari() {
+        Product p = dao.getProductById(6); // ID 1 olan ürün varsa
+        assertNotNull(p);
+        assertEquals("Laptop", p.getName()); // Örnek veri
     }
 
     @Test
-    public void testStockControl() {
-        Product product = productDAO.getProductById(1); // örnek ürün ID
-        assertNotNull(product, "Ürün bulunmalı");
-
-        if (product.getStock() <= 0) {
-            System.out.println("Stokta yok: " + product.getName());
-        }
-
-        assertTrue(product.getStock() >= 0, "Stok sayısı negatif olamaz");
+    void testStokKontrolu() {
+        Product p = dao.getProductById(6);
+        assertTrue(p.getStock() >= 0); // Negatif stok olamaz
     }
 }

@@ -35,6 +35,34 @@ public class ProductDAO {
 
         return products;
     }
+    // ID'ye göre bir ürün getiren metot
+    public Product getProductById(int id) {
+        Product product = null;
+        String sql = "SELECT * FROM products WHERE id = ?";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, id);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    product = new Product.ProductBuilder()
+                            .setId(rs.getInt("id"))
+                            .setName(rs.getString("name"))
+                            .setDescription(rs.getString("description"))
+                            .setPrice(rs.getDouble("price"))
+                            .setStock(rs.getInt("stock"))
+                            .build();
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return product;
+    }
+
 
     // Yeni ürün ekleyen metot
     public void addProduct(Product product) {

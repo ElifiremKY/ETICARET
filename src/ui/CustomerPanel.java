@@ -1,6 +1,7 @@
 package ui;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.swing.*;
 import java.awt.*;
 
@@ -24,6 +25,8 @@ public class CustomerPanel extends JFrame
         });
         mainPanel.add(exitButton, BorderLayout.SOUTH);
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 import model.CartManager;
 import model.OrderManager;
 
@@ -64,13 +67,19 @@ public class CustomerPanel extends JFrame {
         bottomPanel.add(exitButton);
 
         mainPanel.add(bottomPanel, BorderLayout.SOUTH);
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
 
         add(mainPanel);
         setVisible(true);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 
     // Sipariş tamamlama işlemi
     private void checkout(CartManager cartManager) {
@@ -82,5 +91,8 @@ public class CustomerPanel extends JFrame {
         }
     }
 
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
 }

@@ -4,10 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class SellerPanel extends JFrame
 {
     public SellerPanel()
     {
+=======
+public class SellerPanel extends JFrame {
+    public SellerPanel() {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
 public class SellerPanel extends JFrame {
     public SellerPanel() {
@@ -19,6 +24,11 @@ public class SellerPanel extends JFrame {
 
         JPanel mainPanel = new JPanel(new BorderLayout());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        // 'seller' rolüyle ürün panelini oluşturuyoruz, sepete ekleme işlemi yapılmadığı için CartManager gereksiz
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
 
         // 'seller' rolüyle ürün panelini oluşturuyoruz, sepete ekleme işlemi yapılmadığı için CartManager gereksiz
@@ -41,8 +51,12 @@ public class SellerPanel extends JFrame {
 
         // Buton işlevleri
 <<<<<<< HEAD
+<<<<<<< HEAD
         exitButton.addActionListener(e ->
         {
+=======
+        exitButton.addActionListener(e -> {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
         exitButton.addActionListener(e -> {
 >>>>>>> fa0ea9d (değişiklikler eklendi)
@@ -50,6 +64,7 @@ public class SellerPanel extends JFrame {
             new LoginFrame();
         });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         addButton.addActionListener(e ->
         {
@@ -59,11 +74,16 @@ public class SellerPanel extends JFrame {
         removeButton.addActionListener(e ->
         {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
         addButton.addActionListener(e -> {
             tablePanel.showAddProductDialog();
         });
 
         removeButton.addActionListener(e -> {
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
             tablePanel.removeSelectedProduct();
         });

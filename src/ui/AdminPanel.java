@@ -3,16 +3,22 @@ package ui;
 import javax.swing.*;
 import java.awt.*;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 public class AdminPanel extends JFrame
 {
     public AdminPanel()
     {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 import model.CartManager;
 
 public class AdminPanel extends JFrame {
     public AdminPanel() {
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
         setTitle("Admin Paneli");
         setSize(700, 500);
@@ -21,12 +27,15 @@ public class AdminPanel extends JFrame {
 
         JPanel mainPanel = new JPanel(new BorderLayout());
 <<<<<<< HEAD
+<<<<<<< HEAD
         mainPanel.add(new ProductTablePanel("admin"), BorderLayout.CENTER);
 
         JButton exitButton = new JButton("Çıkış Yap");
         exitButton.addActionListener(e ->
         {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 
         // CartManager'ı oluşturuyoruz
         CartManager cartManager = new CartManager();
@@ -36,6 +45,9 @@ public class AdminPanel extends JFrame {
 
         JButton exitButton = new JButton("Çıkış Yap");
         exitButton.addActionListener(e -> {
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
             dispose();
             new LoginFrame();
@@ -46,7 +58,11 @@ public class AdminPanel extends JFrame {
         setVisible(true);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
 }
 >>>>>>> fa0ea9d (değişiklikler eklendi)

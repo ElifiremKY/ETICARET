@@ -6,6 +6,7 @@ import java.awt.*;
 import java.util.List;
 import dao.ProductDAO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import model.Product;
 
 
@@ -18,6 +19,8 @@ public class ProductTablePanel extends JPanel
     public ProductTablePanel(String role)
     {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 import model.*;
 
 public class ProductTablePanel extends JPanel {
@@ -29,6 +32,9 @@ public class ProductTablePanel extends JPanel {
     // Bu constructor 'role' ve 'cartManager' parametrelerini kabul ediyor
     public ProductTablePanel(String role, CartManager cartManager) {
         this.cartManager = cartManager; // Sepet işlemleri için CartManager'ı kaydediyoruz
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
         setLayout(new BorderLayout());
 
@@ -38,6 +44,7 @@ public class ProductTablePanel extends JPanel {
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         JButton detayBtn = new JButton("Detayları Göster");
         add(detayBtn, BorderLayout.SOUTH);
@@ -55,6 +62,8 @@ public class ProductTablePanel extends JPanel {
         for (Product product : products)
         {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
         JPanel buttonPanel = new JPanel(new FlowLayout());
 
         JButton detayBtn = new JButton("Detayları Göster");
@@ -85,6 +94,9 @@ public class ProductTablePanel extends JPanel {
         model.setRowCount(0);
         List<Product> products = productDAO.getAllProducts();
         for (Product product : products) {
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
             model.addRow(new Object[]{
                     product.getId(),
@@ -97,11 +109,17 @@ public class ProductTablePanel extends JPanel {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void showSelectedProductDetails()
     {
         int selectedRow = table.getSelectedRow();
         if (selectedRow != -1)
         {
+=======
+    private void showSelectedProductDetails() {
+        int selectedRow = table.getSelectedRow();
+        if (selectedRow != -1) {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
     private void showSelectedProductDetails() {
         int selectedRow = table.getSelectedRow();
@@ -117,8 +135,12 @@ public class ProductTablePanel extends JPanel {
 
             new ProductDetailDialog(product);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } else
         {
+=======
+        } else {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
         } else {
 >>>>>>> fa0ea9d (değişiklikler eklendi)
@@ -127,9 +149,12 @@ public class ProductTablePanel extends JPanel {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void showAddProductDialog()
     {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
     // Sepete ürün ekleme işlevi
     private void addSelectedProductToCart() {
         int selectedRow = table.getSelectedRow();
@@ -163,6 +188,9 @@ public class ProductTablePanel extends JPanel {
     }
 
     public void showAddProductDialog() {
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
         JTextField nameField = new JTextField();
         JTextField descField = new JTextField();
@@ -183,10 +211,15 @@ public class ProductTablePanel extends JPanel {
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (result == JOptionPane.OK_OPTION)
         {
             try
             {
+=======
+        if (result == JOptionPane.OK_OPTION) {
+            try {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
         if (result == JOptionPane.OK_OPTION) {
             try {
@@ -207,8 +240,12 @@ public class ProductTablePanel extends JPanel {
                 loadProductsFromDatabase();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             } catch (Exception e)
             {
+=======
+            } catch (Exception e) {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
             } catch (Exception e) {
 >>>>>>> fa0ea9d (değişiklikler eklendi)
@@ -217,6 +254,7 @@ public class ProductTablePanel extends JPanel {
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public void removeSelectedProduct()
     {
@@ -227,19 +265,28 @@ public class ProductTablePanel extends JPanel {
             if (confirm == JOptionPane.YES_OPTION)
             {
 =======
+=======
+>>>>>>> fa0ea9d (değişiklikler eklendi)
     public void removeSelectedProduct() {
         int selectedRow = table.getSelectedRow();
         if (selectedRow != -1) {
             int confirm = JOptionPane.showConfirmDialog(this, "Bu ürünü silmek istediğinize emin misiniz?", "Onay", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
+<<<<<<< HEAD
+>>>>>>> fa0ea9d (değişiklikler eklendi)
+=======
 >>>>>>> fa0ea9d (değişiklikler eklendi)
                 int id = (int) model.getValueAt(selectedRow, 0);
                 productDAO.deleteProduct(id);
                 loadProductsFromDatabase();
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
         } else
         {
+=======
+        } else {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
 =======
         } else {
 >>>>>>> fa0ea9d (değişiklikler eklendi)

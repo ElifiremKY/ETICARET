@@ -3,16 +3,26 @@ package ui;
 import javax.swing.*;
 import java.awt.*;
 
+<<<<<<< HEAD
 public class SellerPanel extends JFrame
 {
     public SellerPanel()
     {
+=======
+public class SellerPanel extends JFrame {
+    public SellerPanel() {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
         setTitle("Satıcı Paneli");
         setSize(800, 550);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel(new BorderLayout());
+<<<<<<< HEAD
+=======
+
+        // 'seller' rolüyle ürün panelini oluşturuyoruz, sepete ekleme işlemi yapılmadığı için CartManager gereksiz
+>>>>>>> fa0ea9d (değişiklikler eklendi)
         ProductTablePanel tablePanel = new ProductTablePanel("seller");
         mainPanel.add(tablePanel, BorderLayout.CENTER);
 
@@ -30,12 +40,17 @@ public class SellerPanel extends JFrame
         mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 
         // Buton işlevleri
+<<<<<<< HEAD
         exitButton.addActionListener(e ->
         {
+=======
+        exitButton.addActionListener(e -> {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
             dispose();
             new LoginFrame();
         });
 
+<<<<<<< HEAD
         addButton.addActionListener(e ->
         {
             tablePanel.showAddProductDialog();
@@ -43,6 +58,13 @@ public class SellerPanel extends JFrame
 
         removeButton.addActionListener(e ->
         {
+=======
+        addButton.addActionListener(e -> {
+            tablePanel.showAddProductDialog();
+        });
+
+        removeButton.addActionListener(e -> {
+>>>>>>> fa0ea9d (değişiklikler eklendi)
             tablePanel.removeSelectedProduct();
         });
 
